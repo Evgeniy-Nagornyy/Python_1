@@ -5,8 +5,8 @@ if (income - costs) < 0:
     print(f'Убыток - {income - costs}')
 elif (income - costs) > 0:
     print(f'Прибыль - {income - costs}')
-    print(f'Рентабельность выручки - {(income / costs) * 100}%')
+    print(f'Рентабельность выручки - {(income / costs) * 100:.2f}%')
     num_employees = int(input('Введите число сотрудников - '))
-    print(f'Прибыль на одного сотрудника - {(income - costs) / num_employees}')
+    print(f'Прибыль на одного сотрудника - {(income - costs) / num_employees:.2f}')
 else:
     print('Выручка равна издержке')
