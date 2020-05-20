@@ -11,14 +11,8 @@ def int_func(user_list, filter=False):
                     result.remove(user_list[i])  # если обнаружено несоответствие условию, то удаляем слово
                     break
 
-    for k in range(len(result)):  # в каждом слове делаем с заглавной буквы.
-        for p in range(len(result[k])):  # str.title увы не подходит... должен быть более короткий вариант
-            if p == 0:
-                result_end += result[k][p].upper()
-            else:
-                result_end += result[k][p]
-        result_end += ' '
-
+    for k in result:  # в каждом слове делаем с заглавной буквы.
+        result_end += (k.replace(k[0], k[0].upper(), 1) + ' ')
     return result_end
 
 
