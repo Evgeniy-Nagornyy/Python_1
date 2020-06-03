@@ -10,13 +10,13 @@ class Matrix:
 
     def __add__(self, other):
         try:
-            for k in range(len(self.matrix)):  # проверяем
-                if len(self.matrix[k]) == len(other.matrix[k])  and len(self.matrix) == len(other.matrix):
+            for k in range(len(self.matrix)):  # проверяем соответстве размерности
+                if len(self.matrix[k]) == len(other.matrix[k]) and len(self.matrix) == len(other.matrix):
                     continue
                 else:
                     return 'Операция сложения определена только для матриц одного порядка!'
             return Matrix([[self.matrix[i][j] + other.matrix[i][j] for j in range(len(self.matrix[i]))]
-                           for i in range(len(self.matrix))])
+                           for i in range(len(self.matrix))])  # осуществляем сложение матриц
         except TypeError:
             return 'Элементы матрицы должны содержать только числа!'
 

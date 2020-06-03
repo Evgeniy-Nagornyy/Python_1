@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 
 class Clothes(ABC):
@@ -9,7 +9,7 @@ class Clothes(ABC):
     def __str__(self):
         return f'Размер одежды "{self.title}" = {self.size}'
 
-    @abstractclassmethod
+    @abstractmethod
     def consumption(self):
         pass
 
@@ -26,5 +26,5 @@ class Suit(Clothes):
         return 2 * self.size + 0.3
 
 
-x = Suit(25, 'H&M')
+x = Coat(25, 'H&M')
 print(x), print(x.consumption)
